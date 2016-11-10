@@ -39,6 +39,8 @@
  */
 package batfai.samuentropy.brainboard7;
 
+import android.util.Log;
+
 /**
  *
  * @author nbatfai
@@ -51,4 +53,5 @@ public class NeuronGameActivity extends android.app.Activity {
         setContentView(R.layout.main);
                 
     }
+
 }
