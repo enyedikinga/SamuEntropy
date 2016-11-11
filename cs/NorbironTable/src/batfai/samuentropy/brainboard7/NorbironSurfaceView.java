@@ -476,9 +476,6 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 fromsy = y;
             }
 
-            if(!deleteInProgress)
-                repaint();
-
         } else if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
 
             if(selNb != null){
@@ -507,6 +504,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 }
 
                 repaint();
+
 
                 now = newnow;
             }
