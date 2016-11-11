@@ -343,7 +343,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
             }
 
             if(!deleteInProgress){
-                for (NeuronBox nb : nodeBoxes) {
+                for (NeuronBox nb : new java.util.ArrayList<NeuronBox>(nodeBoxes)) {
                     if(nb.getType() == -1){
                         nb.setXY(64, 62);
                     }
@@ -476,7 +476,8 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 fromsy = y;
             }
 
-            repaint();
+            if(!deleteInProgress)
+                repaint();
 
         } else if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
 
